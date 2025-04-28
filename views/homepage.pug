@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    title= title
+    style.
+        body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      a {
+        display: inline-block;
+        margin-bottom: 15px; /* Space */
+        font-size: 16px;
+        color: blue 
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: pink;
+      }
+  body
+    h1 CRM Custom Object Records
+    a(href="/update-cobj") Add/Update to this table
+    table(border="1")
+      tr
+        th Name
+        th Bio
+        th Game
+      each record in records
+        tr
+          td= record.properties.name
+          td= record.properties.bio
+          td= record.properties.game
